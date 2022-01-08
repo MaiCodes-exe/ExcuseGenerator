@@ -6,8 +6,8 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  document.querySelector("bttn").addEventListener("click", () => {
-    document.querySelector("#the-excuse").innerHTML = generateExcuse();
+  document.querySelector("#bttn").addEventListener("click", () => {
+    document.querySelector("#theExcuse").innerHTML = generateExcuse();
   });
   let generateExcuse = () => {
     let who = ["The dog", "My grandma", "His turtle", "My bird"];
@@ -24,7 +24,14 @@ window.onload = () => {
     let actionIndex = Math.floor(Math.random() * action.length);
     let whatIndex = Math.floor(Math.random() * what.length);
     let whenIndex = Math.floor(Math.random() * when.length);
-    return who[whoIndex] + " " + action[actionIndex] + " ";
-    +what[whatIndex] + " " + when[whenIndex];
+    return (
+      who[whoIndex] +
+      " " +
+      action[actionIndex] +
+      " " +
+      what[whatIndex] +
+      " " +
+      when[whenIndex]
+    );
   };
 };
